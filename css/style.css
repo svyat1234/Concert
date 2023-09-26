@@ -8,13 +8,53 @@
 body {
   background: #000;
   color: #e5e5e5;
+  font-family: "Overpass", sans-serif;
+}
+
+input {
   font-family: "Overpass";
+}
+
+button {
+  font-family: "Overpass";
+  cursor: pointer;
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
   margin: auto;
+}
+
+.title {
+  font-size: 79px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.title--light {
+  color: #8bd976;
+}
+
+.button {
+  width: 134px;
+  height: 34px;
+  text-transform: uppercase;
+  font-size: 17px;
+  border-radius: 17px;
+  font-weight: bold;
+}
+.button--light {
+  line-height: 2.3;
+  border: none;
+  background-color: #8bd976;
+}
+.button--secondary {
+  line-height: 1.9;
+  background: none;
+}
+.button--secondary-light {
+  color: #8bd976;
+  border: 3px solid #8bd976;
 }
 
 .header {
@@ -53,4 +93,50 @@ body {
   height: 30px;
   color: #e5e5e5;
   font-size: 16px;
+}
+
+.promo {
+  height: 90vh;
+  margin-top: -110px;
+  padding-top: 222px;
+  background: url("../img/promo-star-down.png") no-repeat bottom -100px left -100px, url("../img/promo-star.png") no-repeat top -110px right 450px, url("../img/promo-line.png") no-repeat center 100%;
+}
+.promo__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.promo__preview {
+  max-width: 813px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.promo__heading {
+  max-width: 353px;
+  width: 100%;
+}
+.promo__title {
+  margin-top: 34px;
+}
+.promo__info {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.promo__buttons {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.promo__img {
+  width: 348px;
+  height: 458px;
+  border: 3px solid #e5e5e5;
+  background: url("../img/promo.png") no-repeat center/cover;
 }
