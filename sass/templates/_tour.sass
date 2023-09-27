@@ -1,0 +1,33 @@
+.tour
+    padding-top: 240px
+    padding-bottom: 240px
+    background: url('../img/tour-top-line.png') no-repeat top -300px left -300px, url('../img/tour-bottom-line.png') no-repeat bottom -110px left -60px $main
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__heading
+        max-width: 469px
+        width: 100%
+    &__title
+        margin-bottom: 15px
+    &__info
+        font-size: 14px
+        font-weight: 300
+    &__cards
+        max-width: 442px
+        width: 100%
+    &__card
+        &:first-child
+            padding-bottom: 38px
+            border-bottom: 4px solid $dark
+            margin-bottom: 38px
+        &__title
+            font-size: 35px
+            font-weight: 400
+            margin-bottom: 5px
+        &__text
+            display: flex
+            font-size: 14px
+            font-weight: 300
+            text-align: justify

@@ -35,4 +35,46 @@
         height: 458px
         border: 3px solid $light
         background: url('../img/promo.png') no-repeat center / cover
-        // &__block
+    &__dates
+        max-width: 260px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        margin-bottom: 50px
+    &__card
+        max-width: 110px
+        width: 100%
+        margin-top: 40px
+        position: relative
+        &--up::before
+            position: absolute
+            top: 0
+            left: 0
+            margin-top: -55px
+            content: ''
+            display: flex
+            width: 106px
+            height: 15px
+            border: 3px solid $accent
+            border-radius: 30px
+        &--down::after
+            position: absolute
+            bottom: 0
+            left: 0
+            margin-bottom: -55px
+            content: ''
+            display: flex
+            width: 106px
+            height: 15px
+            border: 3px solid $accent
+            border-radius: 30px        
+        &__title
+            font-size: 35px
+            font-weight: 400
+            color: $accent
+            margin-bottom: 15px
+    &__list
+        font-size: 14px
+        list-style: none

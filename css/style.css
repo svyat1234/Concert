@@ -30,6 +30,7 @@ button {
   font-size: 79px;
   font-weight: 400;
   text-transform: uppercase;
+  color: #000;
 }
 .title--light {
   color: #8bd976;
@@ -55,6 +56,11 @@ button {
 .button--secondary-light {
   color: #8bd976;
   border: 3px solid #8bd976;
+}
+
+.section-light {
+  background: #8bd876;
+  color: #000;
 }
 
 .header {
@@ -139,4 +145,95 @@ button {
   height: 458px;
   border: 3px solid #e5e5e5;
   background: url("../img/promo.png") no-repeat center/cover;
+}
+.promo__dates {
+  max-width: 260px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.promo__card {
+  max-width: 110px;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+.promo__card--up::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: -55px;
+  content: "";
+  display: flex;
+  width: 106px;
+  height: 15px;
+  border: 3px solid #8bd976;
+  border-radius: 30px;
+}
+.promo__card--down::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -55px;
+  content: "";
+  display: flex;
+  width: 106px;
+  height: 15px;
+  border: 3px solid #8bd976;
+  border-radius: 30px;
+}
+.promo__card__title {
+  font-size: 35px;
+  font-weight: 400;
+  color: #8bd976;
+  margin-bottom: 15px;
+}
+.promo__list {
+  font-size: 14px;
+  list-style: none;
+}
+
+.tour {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background: url("../img/tour-top-line.png") no-repeat top -300px left -300px, url("../img/tour-bottom-line.png") no-repeat bottom -110px left -60px #8bd876;
+}
+.tour__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour__heading {
+  max-width: 469px;
+  width: 100%;
+}
+.tour__title {
+  margin-bottom: 15px;
+}
+.tour__info {
+  font-size: 14px;
+  font-weight: 300;
+}
+.tour__cards {
+  max-width: 442px;
+  width: 100%;
+}
+.tour__card:first-child {
+  padding-bottom: 38px;
+  border-bottom: 4px solid #000;
+  margin-bottom: 38px;
+}
+.tour__card__title {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.tour__card__text {
+  display: flex;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: justify;
 }
