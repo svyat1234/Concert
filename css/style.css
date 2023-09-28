@@ -237,3 +237,59 @@ button {
   font-weight: 300;
   text-align: justify;
 }
+
+.artists {
+  padding: 180px 0px 100px 0px;
+}
+.artists__heading {
+  text-align: center;
+  margin-bottom: 110px;
+}
+.artists__info {
+  display: flex;
+  max-width: 456px;
+  width: 100%;
+  margin: auto;
+  font-size: 14px;
+}
+.artists__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.artists__card {
+  max-width: 527px;
+  width: 100%;
+  margin-bottom: 80px;
+}
+.artists__card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.artists__card__heading {
+  color: #8bd976;
+}
+.artists__card__title {
+  font-size: 35px;
+  font-weight: 400;
+}
+.artists__card__desc {
+  font-size: 17px;
+  font-weight: 400;
+}
+.artists__dates {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 300;
+}
+.artists__date {
+  margin-bottom: 15px;
+}
+.artists__img {
+  width: 527px;
+  height: 240px;
+  border: 3px solid #e5e5e5;
+  margin-bottom: 38px;
+}
