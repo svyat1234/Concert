@@ -20,6 +20,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  border-radius: 30px;
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -30,10 +34,11 @@ button {
   font-size: 79px;
   font-weight: 400;
   text-transform: uppercase;
-  color: #000;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 3px #000;
 }
 .title--light {
-  color: #8bd976;
+  -webkit-text-stroke: 3px #8bd976;
 }
 
 .button {
@@ -43,11 +48,16 @@ button {
   font-size: 17px;
   border-radius: 17px;
   font-weight: bold;
+  line-height: 2.3;
 }
 .button--light {
-  line-height: 2.3;
   border: none;
   background-color: #8bd976;
+}
+.button--dark {
+  border: none;
+  background-color: #000;
+  color: #e5e5e5;
 }
 .button--secondary {
   line-height: 1.9;
@@ -56,6 +66,10 @@ button {
 .button--secondary-light {
   color: #8bd976;
   border: 3px solid #8bd976;
+}
+.button--secondary-dark {
+  border: 3px solid #000;
+  color: #000;
 }
 
 .section-light {
@@ -143,7 +157,7 @@ button {
 .promo__img {
   width: 348px;
   height: 458px;
-  border: 3px solid #e5e5e5;
+  border-radius: 30px;
   background: url("../img/promo.png") no-repeat center/cover;
 }
 .promo__dates {
@@ -290,6 +304,171 @@ button {
 .artists__img {
   width: 527px;
   height: 240px;
-  border: 3px solid #e5e5e5;
   margin-bottom: 38px;
+}
+
+.new {
+  padding: 185px 0;
+  background: url("../img/new-bg.png") no-repeat center/cover #8bd876;
+}
+.new__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new__img {
+  width: 610px;
+  height: 477px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.new__heading {
+  max-width: 450px;
+  width: 100%;
+}
+.new__title {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.new__title span:first-child {
+  width: 100%;
+  text-align: right;
+  position: relative;
+}
+.new__title span:first-child::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -20px;
+  content: "";
+  display: flex;
+  width: 150px;
+  height: 20px;
+  border: 3px solid #000;
+  border-radius: 30px;
+}
+.new__title span:last-child {
+  width: 100%;
+  position: relative;
+}
+.new__title span:last-child::before {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -20px;
+  content: "";
+  display: flex;
+  width: 210px;
+  height: 20px;
+  border: 3px solid #000;
+  border-radius: 30px;
+}
+.new__info {
+  display: flex;
+  max-width: 365px;
+  text-align: justify;
+  width: 100%;
+  font-size: 14.5px;
+  margin-bottom: 30px;
+}
+.new__buttons {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.introducing {
+  padding: 110px 0px;
+}
+.introducing__block {
+  position: relative;
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.introducing__sub {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 260px;
+  width: 100%;
+  margin: auto;
+  font-size: 14px;
+  text-align: right;
+}
+.introducing__heading {
+  max-width: 780px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.introducing__info {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  text-align: justify;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+.introducing__img {
+  width: 400px;
+}
+.introducing__date {
+  margin-top: 50px;
+}
+.introducing__date__title {
+  font-size: 35px;
+  color: #8bd976;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.introducing__date__info {
+  font-size: 14px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+}
+
+.shows {
+  padding: 100px 0px 150px 0px;
+  background: url("../img/shows_line.png") no-repeat right top, url("../img/shows_line.png") no-repeat left -50px bottom -30px, #8bd876;
+  position: relative;
+}
+.shows__heading {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.shows__sub {
+  font-size: 35px;
+  font-weight: 400;
+  -webkit-text-stroke: 2px #000;
+  color: rgba(0, 0, 0, 0);
+}
+.shows__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  flex-wrap: wrap;
+}
+.shows__card {
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+.shows__date {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.shows__info {
+  font-size: 14px;
+  font-weight: 300;
+  display: flex;
+  text-align: justify;
+  margin-bottom: 15px;
 }

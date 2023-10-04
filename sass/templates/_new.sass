@@ -1,0 +1,61 @@
+.new
+    padding: 185px 0
+    background: url('../img/new-bg.png') no-repeat center / cover $main
+    &__block
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__img
+        width: 610px
+        height: 477px
+        // border: 3px solid $light
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+    &__heading
+        max-width: 450px
+        width: 100%
+    &__title
+        width: 100%
+        display: flex
+        flex-wrap: wrap
+        & span:first-child
+            width: 100%
+            text-align: right
+            position: relative
+            &::before
+                position: absolute
+                left: 0
+                top: 50%
+                margin-top: -20px
+                content: ''
+                display: flex
+                width: 150px
+                height: 20px
+                border: 3px solid $dark
+                border-radius: 30px
+        & span:last-child
+            width: 100%
+            position: relative
+            &::before
+                position: absolute
+                right: 0
+                top: 50%
+                margin-top: -20px
+                content: ''
+                display: flex
+                width: 210px
+                height: 20px
+                border: 3px solid $dark
+                border-radius: 30px
+    &__info
+        display: flex
+        max-width: 365px
+        text-align: justify
+        width: 100%
+        font-size: 14.5px
+        margin-bottom: 30px
+    &__buttons
+        max-width: 300px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center

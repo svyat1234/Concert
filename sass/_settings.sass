@@ -12,6 +12,8 @@ input
 button
     font-family: 'Overpass'
     cursor: pointer
+img
+    border-radius: 30px
 .container
     max-width: 1200px
     width: 100%
@@ -20,9 +22,11 @@ button
     font-size: 79px
     font-weight: 400
     text-transform: uppercase
-    color: $dark
+    color: rgba(0, 0, 0, 0)
+    -webkit-text-stroke: 3px $dark
     &--light
-        color: $accent
+        -webkit-text-stroke: 3px $accent
+        // color: $accent
 .button
     width: 134px
     height: 34px
@@ -30,17 +34,23 @@ button
     font-size: 17px
     border-radius: 17px
     font-weight: bold
+    line-height: 2.3
     &--light
-        line-height: 2.3
         border: none
         background-color: $accent
+    &--dark
+        border: none
+        background-color: $dark
+        color: $light
     &--secondary
         line-height: 1.9
         background: none
         &-light
             color: $accent
             border: 3px solid $accent
+        &-dark
+            border: 3px solid $dark
+            color: $dark
 .section-light
     background: $main
     color: $dark
-    
