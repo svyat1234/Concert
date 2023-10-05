@@ -1,8 +1,28 @@
+@keyframes flare {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes visibilityBtn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 *, input, button {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -49,32 +69,143 @@ img {
   border-radius: 17px;
   font-weight: bold;
   line-height: 2.3;
+  position: relative;
+  overflow: hidden;
 }
 .button--light {
   border: none;
   background-color: #8bd976;
+}
+.button--light:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 15px;
+  transform: skewX(-30deg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6));
+  animation: flare 0.3s linear;
 }
 .button--dark {
   border: none;
   background-color: #000;
   color: #e5e5e5;
 }
+.button--dark:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 20px;
+  transform: skewX(-30deg);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+  animation: flare 0.3s linear;
+}
 .button--secondary {
   line-height: 1.9;
   background: none;
+  transition: all 0.3s;
+}
+.button--secondary span {
+  position: relative;
+  z-index: 4;
 }
 .button--secondary-light {
   color: #8bd976;
   border: 3px solid #8bd976;
+  position: relative;
+}
+.button--secondary-light::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 100%;
+  width: 0%;
+  transform: skewX(-30deg);
+  background: #8bd976;
+  transition: all 0.3s;
+}
+.button--secondary-light:hover {
+  color: #000;
+}
+.button--secondary-light:hover::before {
+  width: 104%;
 }
 .button--secondary-dark {
   border: 3px solid #000;
   color: #000;
 }
+.button--secondary-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 100%;
+  width: 0%;
+  transform: skewX(-30deg);
+  background: #000;
+  transition: all 0.3s;
+}
+.button--secondary-dark:hover {
+  color: #8bd976;
+}
+.button--secondary-dark:hover::before {
+  width: 104%;
+}
 
 .section-light {
   background: #8bd876;
   color: #000;
+}
+
+#up {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  left: 100px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: url("../img/up.svg") no-repeat center #8bd976;
+  background-size: 70%;
+  transition: transform 0.3s;
+}
+
+.up-visible {
+  transform: scale(1);
+}
+
+.up-hidden {
+  transform: scale(0);
+}
+
+.error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(229, 229, 229, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  opacity: 0;
+}
+
+.error-visible {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.error-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .header {
@@ -471,4 +602,90 @@ img {
   display: flex;
   text-align: justify;
   margin-bottom: 15px;
+}
+
+.shop {
+  padding: 115px 0;
+}
+.shop__heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -30px;
+}
+.shop__info {
+  display: flex;
+  max-width: 495px;
+  width: 100%;
+  font-size: 14px;
+}
+.shop__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.shop__card {
+  max-width: 526px;
+  width: 100%;
+  margin-top: 100px;
+}
+.shop__card__info {
+  max-width: 526px;
+  width: 100%;
+  position: relative;
+  margin-top: -50px;
+  margin-left: 10px;
+  background-color: #8bd876;
+  border-radius: 30px;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop__name {
+  font-size: 35px;
+  font-weight: 400;
+  color: #000;
+}
+
+.footer {
+  padding: 95px 60px;
+  background-color: #8bd876;
+}
+.footer__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.footer__title {
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #000;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.footer__link {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__rights {
+  font-size: 17px;
+  font-weight: 400;
+  color: #000;
 }

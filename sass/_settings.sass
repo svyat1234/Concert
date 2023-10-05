@@ -3,6 +3,8 @@
     padding: 0
     margin: 0
     outline: none
+html
+    scroll-behavior: smooth
 body
     background: $dark
     color: $light
@@ -26,7 +28,8 @@ img
     -webkit-text-stroke: 3px $dark
     &--light
         -webkit-text-stroke: 3px $accent
-        // color: $accent
+.flare
+
 .button
     width: 134px
     height: 34px
@@ -35,22 +38,113 @@ img
     border-radius: 17px
     font-weight: bold
     line-height: 2.3
+    position: relative
+    overflow: hidden
     &--light
         border: none
         background-color: $accent
+        &:hover::after
+            content: ''
+            position: absolute
+            top: 0
+            left: -150%
+            height: 100%
+            width: 15px
+            transform: skewX(-30deg)
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6))
+            animation: flare 0.3s linear
     &--dark
         border: none
         background-color: $dark
         color: $light
+        &:hover::after
+            content: ''
+            position: absolute
+            top: 0
+            left: -150%
+            height: 100%
+            width: 20px
+            transform: skewX(-30deg)
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1))
+            animation: flare 0.3s linear
     &--secondary
         line-height: 1.9
         background: none
+        transition: all 0.3s
+        & span
+            position: relative
+            z-index: 4
         &-light
             color: $accent
             border: 3px solid $accent
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: -3px
+                height: 100%
+                width: 0%
+                transform: skewX(-30deg)
+                background: $accent
+                transition: all 0.3s
+            &:hover
+                color: $dark
+                &::before
+                    width: 104%
         &-dark
             border: 3px solid $dark
             color: $dark
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: -3px
+                height: 100%
+                width: 0%
+                transform: skewX(-30deg)
+                background: $dark
+                transition: all 0.3s
+            &:hover
+                color: $accent
+                &::before
+                    width: 104%
 .section-light
     background: $main
     color: $dark
+
+#up
+    position: fixed
+    width: 50px
+    height: 50px
+    bottom: 50px
+    left: 100px
+    border-radius: 50%
+    border: 2px solid $dark
+    background: url('../img/up.svg') no-repeat center $accent
+    background-size: 70%
+    transition: transform 0.3s
+.up-visible
+    transform: scale(1)
+.up-hidden
+    transform: scale(0)
+.error
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: rgba($light, 0.7)
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 46px
+    color: rgba($dark, 0.6)
+    font-weight: bold
+    opacity: 0
+.error-visible
+    opacity: 1
+    transition: opacity 0.5s
+.error-hidden
+    opacity: 0
+    visibility: hidden

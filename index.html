@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Overpass:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
     <main>
@@ -19,15 +20,15 @@
             </div>
         </header>
         <!-- /.header -->
-        <section class="promo">
+        <section id="concerts" class="promo">
             <div class="promo__block container">
                 <div class="promo__preview">
                     <div class="promo__heading">
                         <h1 class="promo__title title title--light">JOIN THE CONCERT</h1>
                         <span class="promo__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</span>
                         <div class="promo__buttons">
-                            <button class="button button--light">SCHEDULES</button>
-                            <button class="button button--secondary button--secondary-light">LEARN MORE</button>
+                            <button class="button button--light">SCHEDULES<span class="flare"></span></button>
+                            <button class="button button--secondary button--secondary-light"><span>LEARN MORE</span></button>
                         </div>
                         <!-- /.promo__buttons -->
                     </div>
@@ -84,7 +85,7 @@
 
         </section>
         <!-- /.promo -->
-        <section class="tour section-light">
+        <section id="tour" class="tour section-light">
             <div class="tour__block container">
                 <div class="tour__heading">
                     <h2 class="tour__title title">THE TOUR IN A NUTSHELL</h2>
@@ -108,7 +109,7 @@
             <!-- /.tour__block container -->
         </section>
         <!-- /.tour -->
-        <section class="artists">
+        <section id="artists" class="artists">
             <div class="container">
                 <div class="artists__heading">
                     <h3 class="artists__title title title--light">The Top Artists</h3>
@@ -205,7 +206,7 @@
                     <span class="new__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo</span>
                     <div class="new__buttons">
                         <button class="button button--dark">BUY TICKETS</button>
-                        <button class="button button--secondary button--secondary-dark">LEARN MORE</button>
+                        <button class="button button--secondary button--secondary-dark"><span>LEARN MORE</span></button>
                     </div>
                     <!-- /.new__buttons -->
                 </div>
@@ -214,7 +215,7 @@
             <!-- /.container new__block -->
         </section>
         <!-- /.new -->
-        <section class="introducing">
+        <section id="introducing" class="introducing">
             <div class="container">
                 <div class="introducing__block">
                     <span class="introducing__sub">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</span>
@@ -236,7 +237,7 @@
             <!-- /.container -->
         </section>
         <!-- /.introducing -->
-        <section class="shows">
+        <section id="shows" class="shows">
             <div class="container">
                 <div class="shows__heading">
                     <h3 class="shows__sub">FOR THE YEAR 2021:</h3>
@@ -286,6 +287,103 @@
             <!-- /.container -->
         </section>
         <!-- /.shows -->
+        <section id="shop" class="shop">
+            <div class="container">
+                <div class="shop__heading">
+                    <h2 class="title title--light shop__title">Shop Our Merch</h2>
+                    <span class="shop__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+                </div>
+                <!-- /.shop__heading -->
+                <div class="shop__cards">
+                    <div class="shop__card">
+                        <img src="./img/shop_1.png" alt="Pattern" class="shop__img">
+                        <div class="shop__card__info">
+                            <h3 class="shop__name">PATTERN</h3>
+                            <button class="button button--dark shop__button">SHOP NOW</button>
+                        </div>
+                        <!-- /.shop__card__info -->
+                    </div>
+                    <!-- /.shop__card -->
+                    <div class="shop__card">
+                        <img src="./img/shop_2.png" alt="Dark hoodie" class="shop__img">
+                        <div class="shop__card__info">
+                            <h3 class="shop__name">DARK HOODIE</h3>
+                            <button class="button button--dark shop__button">SHOP NOW</button>
+                        </div>
+                        <!-- /.shop__card__info -->
+                    </div>
+                    <!-- /.shop__card -->
+                    <div class="shop__card">
+                        <img src="./img/shop_3.png" alt="Light hoodie" class="shop__img">
+                        <div class="shop__card__info">
+                            <h3 class="shop__name">LIGHT HOODIE</h3>
+                            <button class="button button--dark shop__button">SHOP NOW</button>
+                        </div>
+                        <!-- /.shop__card__info -->
+                    </div>
+                    <!-- /.shop__card -->
+                    <div class="shop__card">
+                        <img src="./img/shop_4.png" alt="Pop shirt" class="shop__img">
+                        <div class="shop__card__info">
+                            <h3 class="shop__name">POP SHIRT</h3>
+                            <button class="button button--dark shop__button">SHOP NOW</button>
+                        </div>
+                        <!-- /.shop__card__info -->
+                    </div>
+                    <!-- /.shop__card -->
+                </div>
+                <!-- /.shop__cards -->
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.shop -->
+        <section class="footer">
+            <div class="container">
+                <div class="footer__block">
+                    <div class="footer__info">
+                        <h3 class="footer__title">THE COMPANY</h3>
+                        <div class="footer__links">
+                            <a href="#concerts" class="footer__link">Concert</a>
+                            <a href="#tour" class="footer__link">Tour</a>
+                            <a href="#artists" class="footer__link">Artists</a>
+                            <a href="#news" class="footer__link">News</a>
+                            <a href="#introducing" class="footer__link">Introducing</a>
+                            <a href="#shows" class="footer__link">Shows</a>
+                            <a href="#shop" class="footer__link">Shop</a>
+                        </div>
+                        <!-- /.footer__links -->
+                    </div>
+                    <!-- /.footer__info -->
+                    <div class="footer__info">
+                        <h3 class="footer__title">OUR ARTISTS</h3>
+                        <div class="footer__links">
+                            <a href="" class="footer__link">The Black Punk</a>
+                            <a href="" class="footer__link">Rock of Era Band</a>
+                            <a href="" class="footer__link">Rock of East</a>
+                        </div>
+                        <!-- /.footer__links -->
+                    </div>
+                    <!-- /.footer__info -->
+                    <div class="footer__info">
+                        <h3 class="footer__title">LEGAL</h3>
+                        <div class="footer__links">
+                            <a href="" class="footer__link">Privacy Policy</a>
+                            <a href="" class="footer__link">Terms and Conditions</a>
+                        </div>
+                        <!-- /.footer__links -->
+                    </div>
+                    <!-- /.footer__info -->
+                </div>
+                <!-- /.footer__block -->
+                <span class="footer__rights">COPYRIGHT 2021 ALL RIGHTS RESERVED.</span>
+            </div>
+            <!-- /.container -->
+        </section>
+        <!-- /.footer -->
+        <button id="up" class="up-visible up-hidden"></button>
+        <div class="error error-hidden">
+            <span>Упс... Вы удалили сайт!</span>
+        </div>
     </main>
 </body>
 </html>
